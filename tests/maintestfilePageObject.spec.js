@@ -57,7 +57,7 @@ test('Verify the price order (high-low) displayed on the “All Items” page', 
         const price = parseFloat(priceText.replace("$", ""));
         prices.push(price);
     }
-
+    
     // verify if the prices are in correct order 
     const sortedOrder = prices.sort(function(a,b) {return b - a});
     console.log(prices);
