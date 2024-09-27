@@ -12,8 +12,34 @@ const config = {
     ['list'],
     ['html']
   ],
+
+  projects: [
+    {
+      name: 'Chrome', // For Chromium-based browsers (Google Chrome)
+      use: { 
+        browserName: 'chromium',
+        channel: 'chrome', 
+        headless: false, 
+      },
+    },
+    {
+      name: 'Firefox', // For Firefox
+      use: { 
+        browserName: 'firefox',
+        headless: false, 
+      },
+    },
+    {
+      name: 'Edge', // For Microsoft Edge
+      use: { 
+        browserName: 'chromium',
+        channel: 'msedge',
+        headless: false, 
+      },
+    },
+  ],
+
   use: {
-    browserName : 'chromium',
     headless : false,
     screenshot : 'on',
     video: 'on',

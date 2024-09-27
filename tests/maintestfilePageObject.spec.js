@@ -40,7 +40,7 @@ test('Verify sorting order Z-A on All Items page', async ({ page }) => {
     const sortedNames = names.sort().reverse();
     expect(names).toEqual(sortedNames);
 });
-
+    
 test('Verify the price order (high-low) displayed on the “All Items” page', async ({ page }) => {
     await login(page);
     // Click on the sorting dropdown and select Z-A
@@ -57,7 +57,7 @@ test('Verify the price order (high-low) displayed on the “All Items” page', 
         const price = parseFloat(priceText.replace("$", ""));
         prices.push(price);
     }
-    
+
     // verify if the prices are in correct order 
     const sortedOrder = prices.sort(function(a,b) {return b - a});
     console.log(prices);
